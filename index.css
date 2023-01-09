@@ -1,0 +1,961 @@
+
+html, body {
+         margin-left: auto;
+         margin-right: auto;
+         width: 1500px;
+         height: auto;
+         text-align:center;
+      }
+ 
+.vui-slider {
+   position:relative;
+   overflow:hidden;
+   background:#999;
+}
+
+.vui-slider .vui-items {
+   overflow:hidden;
+   width:100%;
+   height:100%;
+}
+.vui-slider .vui-item {
+   display:none;
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+}
+.vui-slider .vui-item a,
+.vui-slider .vui-item img {
+   display:block;
+   padding:0;
+   margin:0;
+   border:none;
+   width: 100%;
+   height: 100%;
+}
+.vui-slider .vui-buttons {
+   position:absolute;
+   z-index:5;
+   bottom:16px;
+   left:50%;
+   float:left;
+   display:inline;
+   filter:alpha(Opacity=80);
+   -moz-opacity:0.8;
+   opacity: 0.8;
+}
+.vui-slider .vui-button { /*아래점*/
+   float:left;
+   display:inline;
+   overflow:hidden;
+   height:12px;
+   width:12px;
+   margin:0 10px;
+   padding:0;
+   border:none;
+   border-radius:6px;
+   background:#FFF;
+   cursor:pointer;
+}
+.vui-slider .vui-button-cur {
+   background-color: black;
+}
+.vui-slider .vui-transfer {
+   display:none;
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   z-index:3;
+}
+.vui-slider .vui-prev { /*커서*/
+   position:absolute;
+   top:50%;
+   left:0;
+   z-index:5;
+   width:60px;
+   height:150px;
+   margin-top:-75px;
+   border-radius:0 10px 10px 0;
+   background:url(prev.gif) no-repeat;
+   cursor:pointer;
+   filter:alpha(opacity=30);
+   -moz-opacity:0.3;
+   -khtml-opacity:0.3;
+   opacity:0.3;
+   transition:0.5s ease;
+   -o-transition:0.5s ease;
+   -webkit-transition:0.5s ease;
+}
+.vui-slider .vui-next {
+   position:absolute;
+   top:50%;
+   right:0;
+   z-index:5;
+   width:60px;
+   height:150px;
+   margin-top:-75px;
+   border-radius:10px 0 0 10px;
+   background:url(next.gif) no-repeat;
+   cursor:pointer;
+   filter:alpha(opacity=30);
+   -moz-opacity:0.3;
+   -khtml-opacity:0.3;
+   opacity:0.3;
+   transition:0.5s ease;
+   -o-transition:0.5s ease;
+   -webkit-transition:0.5s ease;
+}
+.vui-slider .vui-sidebutton-hover {
+   filter:alpha(opacity=40);
+   -moz-opacity:0.4;
+   -khtml-opacity:0.4;
+   opacity:0.4;
+   background-color: black;
+}
+
+      input[type="text"],
+      input[type="password"]{
+         height: 100%;
+         width: 100%;
+         border: 1px solid #bcbcbc;
+         -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;
+      }
+      input[type="button"]{
+         height: 100%;
+         width: 100%;
+         background-color: #2980b9;
+         font-size: 20px;
+         font-weight: bold;
+         border:0;
+         outline: 0;
+         color:white;
+         cursor: pointer;
+         border-radius: 0.35em;
+      }
+
+a:link { color: dimgray; text-decoration: none;}
+a:visited { color: dimgray; text-decoration: none;}
+.map{
+   width:auto;
+   height: auto;
+   margin-left:auto; 
+   margin-right:auto;
+}
+.header{
+   margin-top : 3%;
+   margin-bottom : 3%;
+   margin-left: auto;
+   margin-right : auto;
+   height: 100px;
+   width: 500px;
+}
+
+#topMenu {
+   height: 50px;
+   width: auto;
+   background-color: #2980b9;
+   margin-bottom: 2%;
+}
+
+#topMenu ul li {
+   list-style: none;
+   background-color: #2980b9;
+   float: left;
+   line-height: 50px;
+   vertical-align: middle;
+   text-align: center;
+}
+
+#topMenu .menuLink {
+   text-decoration:none;
+   color: white;
+   display: block;
+   width: 283px;
+   font-size: 20px;
+   font-weight: bold;
+   font-family: "Trebuchet MS";
+}
+#topMenu .menuLink:hover {
+   color: black;
+}
+
+.main_box{
+   width: 100%;
+   height: 330px;
+   margin-bottom: 2%;
+}
+.main_img{
+   width: 73%;
+   height: 100%;
+   float: left;
+   margin-right: 1%;
+   margin-left: 0.3%;
+}
+.login_box{
+   width:25%;
+   height: 100%;
+   float: left;
+   border: 2px solid #2980b9;
+}
+.input_box{
+   width: 90%;
+   height: 25%;
+   margin-top: 20%;
+   margin-right: auto;
+   margin-left: auto;
+}
+.view_id_box{
+   width: 40%;
+   height: 48%;
+   margin-bottom: 2%;
+   margin-right: auto;
+   margin-left:auto;
+}
+.view_id{
+   width: auto;
+   height: 80%;
+   float: left;
+   font-size: 22px;
+
+}
+.view_sla{
+   width: auto;
+   height: 80%;
+   float: left;
+   font-size: 18px;
+   margin-top: 3%;
+}
+.view_hello{
+   width: 100%;
+   height: 48%;
+   font-size: 22px;
+   margin-top: 3%;
+}
+.logout_button{
+   width: 90%;
+   height: 15%;
+   margin-top: 4%;
+   margin-right: auto;
+   margin-left: auto;
+}
+.join_box{
+   width: 90%;
+   height: 10%;
+   margin-top: 4%;
+   margin-right: auto;
+   margin-left: auto;
+}
+.carpul_box{
+   margin-top: 5%;
+   margin-bottom: 2%;
+   height: auto;
+   width: 100%;
+}
+/*태워줄게요*/
+.ride_car_title{
+   width: auto;
+   height: auto;
+   font-size: 30px;
+   font-weight: bold;
+   text-align: left;
+   margin-bottom: 1%;
+   margin-left:1%;
+}
+/*태워줄게요 리스트들이 보여질 공간*/
+.ride_car{
+   width:100%;
+   height:500px;
+   border:2px solid #2980b9;
+   margin-bottom: 3%;
+   border-radius: 0.5em;
+   font-size: 17px;
+   font-weight: bold;
+   background-color: #ECF0F1;
+}
+/*화면에 보여질 출발지 도착지 출발시간 차량 인원 블랙박스 요금*/
+.ride_car_list{
+   width:100%;
+   height:30px;
+   background-color: #2980b9;
+   font-size: 20px;
+   font-weight: bold;
+   color:white;
+   word-spacing:120px;
+}
+/*보여질 리스트 한 칸*/
+.ride_car_list_view_box{
+   width: 100%;
+   height: 30px;
+}
+.ride_car_start{
+   width:12%;
+   height: 100%;
+   margin-right: 1%;
+   margin-left: 7%;
+   float: left;
+}
+.ride_car_end{
+   width:12%;
+   height: 100%;
+   margin-right: 0.5%;
+   float: left;
+}
+.ride_car_time{
+   width:12%;
+   height: 100%;
+   margin-right: 3%;
+   float: left;
+}
+.ride_car_car{
+   width:8%;
+   height: 100%;
+   margin-right: 3%;
+   float: left;
+}
+.ride_car_people{
+   width:8%;
+   height: 100%;
+   margin-right: 5.5%;
+   float: left;
+}
+.ride_car_blackbox{
+   width:6%;
+   height: 100%;
+   margin-right: 5.3%;
+   float: left;
+}
+.ride_car_money{
+   width:8%;
+   height: 100%;
+   float: left;
+}
+/*화면에 보여지는 태워주세요*/
+.get_car_title{
+   width: auto;
+   height: auto;
+   font-size: 30px;
+   font-weight: bold;
+   text-align: left;
+   margin-bottom: 1%;
+   margin-left:1%;
+}
+/*태워주세요 공간*/
+.get_car{
+   width:100%;
+   height:500px;
+   border:2px solid #2980b9;
+   border-radius: 0.5em;
+   font-size: 17px;
+   font-weight: bold;
+   background-color: #ECF0F1;      
+}
+/*화면에 보여지는 출발지 도착지 출발시간 인원 희망차량 희망요금*/
+.get_car_list{
+   width:100%;
+   height:30px;
+   background-color: #2980b9;
+   font-size: 20px;
+   font-weight: bold;
+   color:white;
+   word-spacing:130px;
+}
+/*리스트 한 공간*/
+.get_car_list_view_box{
+   width: 100%;
+   height: 35px;
+}
+.get_car_start{
+   width:12%;
+   height: 100%;
+   margin-right: 1%;
+   margin-left: 10%;
+   float: left;
+}
+.get_car_end{
+   width:12%;
+   height: 100%;
+   margin-right: 1%;
+   float: left;
+}
+.get_car_time{
+   width:13%;
+   height: 100%;
+   margin-right: 4%;
+   float: left;
+}
+.get_car_people{
+   width:6%;
+   height: 100%;
+   margin-right: 6%;
+   float: left;
+}
+.get_car_car{
+   width:8%;
+   height: 100%;
+   margin-right: 5%;
+   float: left;
+}
+.get_car_money{
+   width:10%;
+   height: 100%;
+   margin-right: 2.5%;
+   float: left;
+}
+.services_box{
+   margin-top: 2%;
+   margin-bottom: 2%;
+   height: 400px;
+}
+.police_box{
+   width:48.5%;
+   height:400px;
+   float: left;
+   border: 2px solid #2980b9;
+   margin-right: 2.3%;
+   border-radius: 0.5em;
+   margin-left:0.1%;
+   background-color: #ECF0F1;
+}
+/*화면에 보여지는 신고내용*/
+.police_box_title{
+   width:100%;
+   height:30px;
+   background-color: #2980b9;
+   font-size: 20px;
+   font-weight: bold;
+   color:white;
+}
+/*리스트 한칸 공간*/
+.police_view_box{
+   width: 100%;
+   height: 35px;
+   font-size: 17px;
+   font-weight: bold;
+}
+/*나오는 제목*/
+.police_content_title{
+   width:30%;
+   height: 100%;
+   margin-right: 0.5%;
+   float: left;
+
+}
+/*나오는 제목*/
+.police_content{
+   width:68%;
+   height: 100%;
+   float: left;
+}
+.qna_box{
+   width:48.5%;
+   height:400px;
+   border: 2px solid #2980b9;
+   float: left;
+   border-radius: 0.5em;
+   background-color: #ECF0F1;
+}
+.qna_box_title{
+   width:100%;
+   height:30px;
+   background-color:#2980b9;
+   font-size: 20px;
+   font-weight: bold;
+   color:white;
+}
+.qna_view_box{
+   width: 100%;
+   height: 35px;
+   font-size: 17px;
+   font-weight: bold;
+}
+.qna_content_title{
+   width:30%;
+   height: 100%;
+   margin-right: 0.5%;
+   float: left;
+}
+.qna_content{
+   width:68%;
+   height: 100%;
+   float: left;
+}
+.footer{
+   height: auto;
+}
+html, body {
+         margin-left: auto;
+         margin-right: auto;
+         width: 1500px;
+         height: auto;
+         text-align:center;
+      }
+ 
+.vui-slider {
+   position:relative;
+   overflow:hidden;
+   background:#999;
+}
+
+.vui-slider .vui-items {
+   overflow:hidden;
+   width:100%;
+   height:100%;
+}
+.vui-slider .vui-item {
+   display:none;
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+}
+.vui-slider .vui-item a,
+.vui-slider .vui-item img {
+   display:block;
+   padding:0;
+   margin:0;
+   border:none;
+   width: 100%;
+   height: 100%;
+}
+.vui-slider .vui-buttons {
+   position:absolute;
+   z-index:5;
+   bottom:16px;
+   left:50%;
+   float:left;
+   display:inline;
+   filter:alpha(Opacity=80);
+   -moz-opacity:0.8;
+   opacity: 0.8;
+}
+.vui-slider .vui-button { /*아래점*/
+   float:left;
+   display:inline;
+   overflow:hidden;
+   height:12px;
+   width:12px;
+   margin:0 10px;
+   padding:0;
+   border:none;
+   border-radius:6px;
+   background:#FFF;
+   cursor:pointer;
+}
+.vui-slider .vui-button-cur {
+   background-color: black;
+}
+.vui-slider .vui-transfer {
+   display:none;
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   z-index:3;
+}
+.vui-slider .vui-prev { /*커서*/
+   position:absolute;
+   top:50%;
+   left:0;
+   z-index:5;
+   width:60px;
+   height:150px;
+   margin-top:-75px;
+   border-radius:0 10px 10px 0;
+   background:url(prev.gif) no-repeat;
+   cursor:pointer;
+   filter:alpha(opacity=30);
+   -moz-opacity:0.3;
+   -khtml-opacity:0.3;
+   opacity:0.3;
+   transition:0.5s ease;
+   -o-transition:0.5s ease;
+   -webkit-transition:0.5s ease;
+}
+.vui-slider .vui-next {
+   position:absolute;
+   top:50%;
+   right:0;
+   z-index:5;
+   width:60px;
+   height:150px;
+   margin-top:-75px;
+   border-radius:10px 0 0 10px;
+   background:url(next.gif) no-repeat;
+   cursor:pointer;
+   filter:alpha(opacity=30);
+   -moz-opacity:0.3;
+   -khtml-opacity:0.3;
+   opacity:0.3;
+   transition:0.5s ease;
+   -o-transition:0.5s ease;
+   -webkit-transition:0.5s ease;
+}
+.vui-slider .vui-sidebutton-hover {
+   filter:alpha(opacity=40);
+   -moz-opacity:0.4;
+   -khtml-opacity:0.4;
+   opacity:0.4;
+   background-color: black;
+}
+
+      input[type="text"],
+      input[type="password"]{
+         height: 100%;
+         width: 100%;
+         border: 1px solid #bcbcbc;
+         -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;
+      }
+      input[type="button"]{
+         height: 100%;
+         width: 100%;
+         background-color: #2980b9;
+         font-size: 20px;
+         font-weight: bold;
+         border:0;
+         outline: 0;
+         color:white;
+         cursor: pointer;
+         border-radius: 0.35em;
+      }
+
+a:link { color: dimgray; text-decoration: none;}
+a:visited { color: dimgray; text-decoration: none;}
+.map{
+   width:auto;
+   height: auto;
+   margin-left:auto; 
+   margin-right:auto;
+}
+.header{
+   margin-top : 3%;
+   margin-bottom : 3%;
+   margin-left: auto;
+   margin-right : auto;
+   height: 100px;
+   width: 500px;
+}
+
+#topMenu {
+   height: 50px;
+   width: auto;
+   background-color: #2980b9;
+   margin-bottom: 2%;
+}
+
+#topMenu ul li {
+   list-style: none;
+   background-color: #2980b9;
+   float: left;
+   line-height: 50px;
+   vertical-align: middle;
+   text-align: center;
+}
+
+#topMenu .menuLink {
+   text-decoration:none;
+   color: white;
+   display: block;
+   width: 283px;
+   font-size: 20px;
+   font-weight: bold;
+   font-family: "Trebuchet MS";
+}
+#topMenu .menuLink:hover {
+   color: black;
+}
+
+.main_box{
+   width: 100%;
+   height: 330px;
+   margin-bottom: 2%;
+}
+.main_img{
+   width: 73%;
+   height: 100%;
+   float: left;
+   margin-right: 1%;
+   margin-left: 0.3%;
+}
+.login_box{
+   width:25%;
+   height: 100%;
+   float: left;
+   border: 2px solid #2980b9;
+}
+.input_box{
+   width: 90%;
+   height: 25%;
+   margin-top: 20%;
+   margin-right: auto;
+   margin-left: auto;
+}
+.input_id{
+   width: 100%;
+   height: 48%;
+   margin-bottom: 2%;
+}
+.input_pw{
+   width: 100%;
+   height: 48%;
+}
+.login_button{
+   width: 90%;
+   height: 15%;
+   margin-top: 4%;
+   margin-right: auto;
+   margin-left: auto;
+}
+.join_box{
+   width: 90%;
+   height: 10%;
+   margin-top: 4%;
+   margin-right: auto;
+   margin-left: auto;
+}
+.carpul_box{
+   margin-top: 5%;
+   margin-bottom: 2%;
+   height: auto;
+   width: 100%;
+}
+/*태워줄게요*/
+.ride_car_title{
+   width: auto;
+   height: auto;
+   font-size: 30px;
+   font-weight: bold;
+   text-align: left;
+   margin-bottom: 1%;
+   margin-left:1%;
+}
+/*태워줄게요 리스트들이 보여질 공간*/
+.ride_car{
+   width:100%;
+   height:500px;
+   border:2px solid #2980b9;
+   margin-bottom: 3%;
+   border-radius: 0.5em;
+   font-size: 17px;
+   font-weight: bold;
+   background-color: #ECF0F1;
+}
+/*화면에 보여질 출발지 도착지 출발시간 차량 인원 블랙박스 요금*/
+.ride_car_list{
+   width:100%;
+   height:30px;
+   background-color: #2980b9;
+   font-size: 20px;
+   font-weight: bold;
+   color:white;
+   word-spacing:120px;
+}
+/*보여질 리스트 한 칸*/
+.ride_car_list_view_box{
+   width: 100%;
+   height: 30px;
+}
+.ride_car_start{
+   width:12%;
+   height: 100%;
+   margin-right: 1%;
+   margin-left: 7%;
+   float: left;
+}
+.ride_car_end{
+   width:12%;
+   height: 100%;
+   margin-right: 0.5%;
+   float: left;
+}
+.ride_car_time{
+   width:12%;
+   height: 100%;
+   margin-right: 3%;
+   float: left;
+}
+.ride_car_car{
+   width:8%;
+   height: 100%;
+   margin-right: 3%;
+   float: left;
+}
+.ride_car_people{
+   width:8%;
+   height: 100%;
+   margin-right: 5.5%;
+   float: left;
+}
+.ride_car_blackbox{
+   width:6%;
+   height: 100%;
+   margin-right: 5.3%;
+   float: left;
+}
+.ride_car_money{
+   width:8%;
+   height: 100%;
+   float: left;
+}
+/*화면에 보여지는 태워주세요*/
+.get_car_title{
+   width: auto;
+   height: auto;
+   font-size: 30px;
+   font-weight: bold;
+   text-align: left;
+   margin-bottom: 1%;
+   margin-left:1%;
+}
+/*태워주세요 공간*/
+.get_car{
+   width:100%;
+   height:500px;
+   border:2px solid #2980b9;
+   border-radius: 0.5em;
+   font-size: 17px;
+   font-weight: bold;
+   background-color: #ECF0F1;      
+}
+/*화면에 보여지는 출발지 도착지 출발시간 인원 희망차량 희망요금*/
+.get_car_list{
+   width:100%;
+   height:30px;
+   background-color: #2980b9;
+   font-size: 20px;
+   font-weight: bold;
+   color:white;
+   word-spacing:130px;
+}
+/*리스트 한 공간*/
+.get_car_list_view_box{
+   width: 100%;
+   height: 35px;
+}
+.get_car_start{
+   width:12%;
+   height: 100%;
+   margin-right: 1%;
+   margin-left: 10%;
+   float: left;
+}
+.get_car_end{
+   width:12%;
+   height: 100%;
+   margin-right: 1%;
+   float: left;
+}
+.get_car_time{
+   width:13%;
+   height: 100%;
+   margin-right: 4%;
+   float: left;
+}
+.get_car_people{
+   width:6%;
+   height: 100%;
+   margin-right: 6%;
+   float: left;
+}
+.get_car_car{
+   width:8%;
+   height: 100%;
+   margin-right: 5%;
+   float: left;
+}
+.get_car_money{
+   width:10%;
+   height: 100%;
+   margin-right: 2.5%;
+   float: left;
+}
+.services_box{
+   margin-top: 2%;
+   margin-bottom: 2%;
+   height: 400px;
+}
+.police_box{
+   width:48.5%;
+   height:400px;
+   float: left;
+   border: 2px solid #2980b9;
+   margin-right: 2.3%;
+   border-radius: 0.5em;
+   margin-left:0.1%;
+   background-color: #ECF0F1;
+}
+/*화면에 보여지는 신고내용*/
+.police_box_title{
+   width:100%;
+   height:30px;
+   background-color: #2980b9;
+   font-size: 20px;
+   font-weight: bold;
+   color:white;
+}
+/*리스트 한칸 공간*/
+.police_view_box{
+   width: 100%;
+   height: 35px;
+   font-size: 17px;
+   font-weight: bold;
+}
+/*나오는 제목*/
+.police_content_title{
+   width:30%;
+   height: 100%;
+   margin-right: 0.5%;
+   float: left;
+
+}
+/*나오는 제목*/
+.police_content{
+   width:68%;
+   height: 100%;
+   float: left;
+}
+.qna_box{
+   width:48.5%;
+   height:400px;
+   border: 2px solid #2980b9;
+   float: left;
+   border-radius: 0.5em;
+   background-color: #ECF0F1;
+}
+.qna_box_title{
+   width:100%;
+   height:30px;
+   background-color:#2980b9;
+   font-size: 20px;
+   font-weight: bold;
+   color:white;
+}
+.qna_view_box{
+   width: 100%;
+   height: 35px;
+   font-size: 17px;
+   font-weight: bold;
+}
+.qna_content_title{
+   width:30%;
+   height: 100%;
+   margin-right: 0.5%;
+   float: left;
+}
+.qna_content{
+   width:68%;
+   height: 100%;
+   float: left;
+}
+.footer{
+   height: 50px;
+}
