@@ -1,6 +1,6 @@
 <?php
   $conn = mysqli_connect(
-    'oregon-cluster-1.cluster-ro-cvuwr1imi7pt.us-west-2.rds.amazonaws.com'
+    'check-cluster-1.cluster-ro-cvuwr1imi7pt.us-west-2.rds.amazonaws.com'
     'admin',
     'admin123',
     'testdb');
